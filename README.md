@@ -12,4 +12,4 @@ TODO
 ===============
 * A lot
 * concatenation step for coffee -> js
-
+* js to insert colors/automated js step for users to fill in one file (colors/themes.json) to automatically render dom with those configurations
