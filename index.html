@@ -1,0 +1,94 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Insert Title</title>
+  <meta name="description" content="your game">
+  <!--Whatever font you want -->
+  <link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css' />
+  <!--link href='http://fonts.googleapis.com/css?family=Lato:100,400,700' rel='stylesheet' type='text/css' /-->
+  <style>
+    body {
+      font-family: 'Press Start 2P';
+      background-color: #000000;
+      color: #ffffff;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    a {
+      color: #00ffff;
+    }
+
+    #me {
+      line-height: 0px;
+      font-size: 10px;
+    }
+
+    #heading {
+      margin: 5 auto;
+      line-height: 5px;
+    }
+
+    #info {
+      margin: 20 auto;
+      max-width: 550px;
+      padding-bottom: 5px;
+    }
+    #message {
+      margin: 20 auto;
+      max-width: 550px;
+
+    }
+    #lives {
+      float: left;
+    }
+
+    #level {
+      float: right;
+    }
+
+    canvas {
+      border: 1px solid #ffffff;
+      margin: 10px auto 0 auto;
+      display: block;
+    }
+
+    #gamebox {
+      padding-bottom: 5px;
+    }
+    #footer {
+      font-size: 10px;
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!--script src="js/jquery-1.11.1.min.js"></script-->
+</head>
+<body>
+  <audio>
+    <!--Whatever audio you want.mp3-->
+  </audio>
+
+  <div id="heading">
+    <h2>Game title</h2>
+    <p id="me">by <a href="http://ggruiz.me/">Gabriel Ruiz</a></p>
+  </div>
+  <hr>
+  <div id="gamebox">
+    <div id="info">
+      <span id="lives">Lives: <span id="lifecount"></span></span>
+      <span id="level">Level: <span id="levelcount">1</span></span>
+    </div>
+    <div id="message">
+    </div>
+    <div id="main">
+      <canvas id="game">
+      </canvas>
+    </div>
+  </div>
+  <hr>
+  <div id="footer">
+    <p>made with love and CoffeeScript. Source code <a href="http://github.com/gruiz17/coffee-game-format">here</a>.</p>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
