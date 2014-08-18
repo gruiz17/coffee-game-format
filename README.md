@@ -8,3 +8,8 @@ Just clone the repo, delete git data, and add in new history for whatever game y
 
 Enjoy! Comes with basic Cakefile, main.coffee with initialized canvas on html with css styles.
 
+TODO
+===============
+* A lot
+* concatenation step for coffee -> js
+
