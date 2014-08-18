@@ -13,3 +13,18 @@ TODO
 * A lot
 * concatenation step for coffee -> js
 * js to insert colors/automated js step for users to fill in one file (colors/themes.json) to automatically render dom with those configurations
+
+Tech/Libraries used
+===============
+* [CoffeeScript](http://coffeescript.org/)
+* [jQuery](http://jquery.com/)
+* [twilson63's Cakefile template](https://github.com/twilson63/cakefile-template)
+
+Music/SFX Credit
+===============
+* [bfxr](http://www.bfxr.net/) for sound effects
+
+Art Credit
+===============
+* Whoever art you choose, unless yourself
+
