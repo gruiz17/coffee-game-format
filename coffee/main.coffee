@@ -21,13 +21,13 @@ $('#game').click (e) ->
 
 $('#gamebox').mousemove (e) ->
 
-update() ->
+update = () ->
   return
-draw () ->
+draw = () ->
   window.ctx.clearRect(0, 0, 550, 550)
   return
 
-gameLoop() ->
+gameLoop = () ->
   update()
   draw()
   return
