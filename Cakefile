@@ -86,6 +86,39 @@ task 'test', 'run tests', -> build -> mocha -> log ":)", green
 # ```
 task 'clean', 'clean generated files', -> clean -> log ";)", green
 
+# ## *concat
+#
+# makes single js file from multiple files
+#
+#
+# <small>Usage</small>
+# ```
+# cake concat
+# ```
+appFiles  = [
+  # omit coffee/ and .coffee to make the below lines a little shorter
+  # 'audio'
+  # 'classes'
+  # 'collision'
+  'main'
+]
+
+task 'concat', 'Build single application file from source files', ->
+  appContents = new Array remaining = appFiles.length
+  for file, index in appFiles then do (file, index) ->
+    fs.readFile "coffee/#{file}.coffee", 'utf8', (err, fileContents) ->
+      throw err if err
+      appContents[index] = fileContents
+      process() if --remaining is 0
+  process = ->
+    fs.writeFile 'js/break.coffee', appContents.join('\n\n'), 'utf8', (err) ->
+      throw err if err
+      exec 'coffee --compile js/app.coffee', (err, stdout, stderr) ->
+        throw err if err
+        console.log stdout + stderr
+        fs.unlink 'js/app.coffee', (err) ->
+          throw err if err
+          console.log 'Done.'
 
 # Internal Functions
 #
@@ -100,6 +133,7 @@ task 'clean', 'clean generated files', -> clean -> log ";)", green
 # ``` coffeescript
 # walk 'coffee', (err, results) -> console.log results
 # ```
+
 walk = (dir, done) ->
   results = []
   fs.readdir dir, (err, list) ->
